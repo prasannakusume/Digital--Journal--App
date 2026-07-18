@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+if(localStorage.getItem("loggedIn") !== "true"){
+    window.location.href = "login.html";
+}
+</script>
+
+    <div class="container">
+        <h1>📖 My Digital Journal </h1>
+        <button onclick="logout()">Logout</button>
+        <button id="themeBtn" onclick="toggleTheme()">
+    🌙 Dark Mode
+</button>
+       
+       <input
+    id="titleInput"
+    type="text"
+    placeholder="Enter Note Title">
+    
+
+        <textarea id="noteInput" placeholder="Write your thoughts..."></textarea>
+
+        <input 
+    id="searchInput" 
+    type="text" 
+    placeholder="Search notes..."
+    onkeyup="searchNotes()">
+        <button id="exportBtn" onclick="exportPDF()">
+    📄 Export PDF
+</button>
+        <button id="addBtn" onclick="addNote()">➕ Add Note</button>
+
+        <div id="notesContainer"></div>
+    </div>
+    <script>
+function logout(){
+
+    localStorage.removeItem("loggedIn");
+
+    window.location.href = "login.html";
+}
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
