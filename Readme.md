@@ -9,7 +9,7 @@ A modern and secure Digital Journal web application that allows users to write, 
  - **Intern ID:** CITS1788
  - **Full Name:** KUSUME LAKSHMI PRASANNA
  - **No. of Weeks:** 8 Weeks 
- - **Project Name:** BrainStorm Arena – Multi-Subject Full-Stack Quiz Platform
+ - **Project Name:** DIGITAL-JOURNAL-APP
  - **Domain**: Full Stack Web Development
 
 ---
